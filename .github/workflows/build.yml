@@ -15,8 +15,10 @@ jobs:
       
       - name: Build with Buildozer
         run: |
-          # Dùng lệnh yes để tự động đồng ý mọi yêu cầu cấp phép
-          yes | buildozer android debug
+          # Dòng này tự động chấp nhận tất cả các thỏa thuận license
+          mkdir -p ~/.android && touch ~/.android/repositories.cfg
+          yes | sdkmanager --licenses || true
+          buildozer android debug
       
       - name: Upload APK
         uses: actions/upload-artifact@v4
