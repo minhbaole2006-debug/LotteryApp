@@ -1,11 +1,7 @@
 [app]
-# (str) Title of your application
 title = LotteryApp
-# (str) Package name
 package.name = lotteryapp
-# (str) Package domain
 package.domain = org.test.lottery
-# (str) Source code where the main.py live
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 1.0
@@ -17,3 +13,4 @@ android.minapi = 21
 
 [buildozer]
 log_level = 2
+warn_on_root = 1
