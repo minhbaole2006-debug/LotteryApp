@@ -1,5 +1,9 @@
 name: Build APK
 on: [push]
+
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,7 +19,7 @@ jobs:
       
       - name: Build with Buildozer
         run: |
-          # Thiết lập môi trường để tự động đồng ý license
+          # Cấu hình để tự động đồng ý tất cả license
           mkdir -p ~/.android
           touch ~/.android/repositories.cfg
           yes | buildozer android debug
