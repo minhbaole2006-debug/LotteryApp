@@ -1,4 +1,5 @@
-[app]
+[app] 
+source.dir = .
 title = LotteryApp
 package.name = lotteryapp
 package.domain = org.test.lottery
